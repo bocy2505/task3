@@ -1,5 +1,5 @@
 package org.softwaretechnologies;
-
+import static org.softwaretechnologies.employee.EmployeeType.*;
 import org.softwaretechnologies.employee.*;
 
 public class EmployeeFactory {
@@ -16,8 +16,11 @@ public class EmployeeFactory {
 
 
     public static Employee createEmployee(String name, int baseSalary, EmployeeType type) {
-        // TODO: реализуйте вышеуказанную функцию
-
-        return null;
+        return switch (type) {
+            case Tester -> new Employee.Tester(name, baseSalary);
+            case Programmer -> new Employee.Programmer(name, baseSalary);
+            case Manager -> new Employee.Manager(name, baseSalary);
+        };
+//        return null;
     }
 }
