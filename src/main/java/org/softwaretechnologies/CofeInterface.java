@@ -1,6 +1,6 @@
 package org.softwaretechnologies;
 
-public interface CofeInterface {
+public interface CofeInterface{
     /**
      * Создайте два метода:
      * для возврата стоимости int getCost();
